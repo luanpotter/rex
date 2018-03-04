@@ -1,0 +1,1 @@
+    cat inner/b.sh

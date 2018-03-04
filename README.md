@@ -68,3 +68,15 @@ The second parameter will be the replacement literally, except for:
 
  * `$n`, where n is a number, will become the substitution pattern
  * `\t` will become tab, `\n` will become newline, `\r` will become carriage return, `\$` will become `$` and `\\` will become `\`
+
+## More options
+
+It's supposed to be simple: if you want simple, stop reading. If you want a few more options, there are flags:
+
+* `-h` : if present, won't run, just show the help section
+* `-f` : if present, the stdin becomes a new-line separated list of files, and rex will perform the replace on those files
+* `-b` : if present, the backup mode is active:
+* * if not on `-f`, rex will output stdin as is, but will save the changes to a `__rex__.bak` file with the requested changes
+* * if on `-f`, it will replace on every file specified, but the results will be saved on `*.bak` files alongside the originals, that won't be touched
+
+There are more examples [here](examples.md).

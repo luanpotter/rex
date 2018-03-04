@@ -6,7 +6,9 @@ Below are some examples that we think might be useful for a lot of people:
 
 ## Extract data in a bash pipe chain
 
+```bash
 cat keys.json | rex '[\w]*=([\w\d\.-]*)' '$1' | xargs -I{} something --secret {}
+```
 
 Without sed escape headaches
 

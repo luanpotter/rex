@@ -28,6 +28,8 @@ chmod +x rex
 sudo mv rex /usr/bin/rex
 ```
 
+The bin bundle is a bit heavy because of the node inclusion, so if you have node, prefer the former methods as they are really, really lightweight (1.3K).
+
 ## Usage
 
 Very simple! Just run:
@@ -43,6 +45,7 @@ But unlike sed, you don't need to escape complex regex'es:
 echo 'package-name-1.2.3' | rex '(\w)-\d[\d-.:+]*' '$1'
 > package-name
 ```
+
 Just use single quotes so `bash` won't replace stuff like `$1`.
 
 If you want to change a file, you can use `sponge`:
@@ -67,7 +70,7 @@ The first parameter is a pure node regex, that will be run with the flags 'mg' (
 
 The second parameter will be the replacement literally, except for:
 
- * `$n`, where n is a number, will become the substitution pattern
+ * `$n`, where n is a number, will become the n-th capture group (starting on `$1`).
  * `\t` will become tab, `\n` will become newline, `\r` will become carriage return, `\$` will become `$` and `\\` will become `\`
 
 ## More options
@@ -78,6 +81,6 @@ It's supposed to be simple: if you want simple, stop reading. If you want a few 
 * `-f` : if present, the stdin becomes a new-line separated list of files, and rex will perform the replace on those files
 * `-b` : if present, the backup mode is active:
 * * if not on `-f`, rex will output stdin as is, but will save the changes to a `__rex__.bak` file with the requested changes
-* * if on `-f`, it will replace on every file specified, but the results will be saved on `*.bak` files alongside the originals, that won't be touched
+* * if on `-f`, it will replace on every file specified, but the originals will be saved on `*.bak` files alongside the originals, that won't be touched
 
 There are more examples [here](examples.md).

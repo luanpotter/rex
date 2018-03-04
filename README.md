@@ -81,6 +81,6 @@ It's supposed to be simple: if you want simple, stop reading. If you want a few 
 * `-f` : if present, the stdin becomes a new-line separated list of files, and rex will perform the replace on those files
 * `-b` : if present, the backup mode is active:
 * * if not on `-f`, rex will output stdin as is, but will save the changes to a `__rex__.bak` file with the requested changes
-* * if on `-f`, it will replace on every file specified, but the originals will be saved on `*.bak` files alongside the originals, that won't be touched
+* * if on `-f`, it will replace on every file specified, but the originals will be saved on `*.bak` files alongside the altered files
 
 There are more examples [here](examples.md).

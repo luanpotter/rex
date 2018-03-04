@@ -58,7 +58,7 @@ Install [sponge](https://linux.die.net/man/1/sponge) for Arch Linux:
 sudo pacman -S moreutils
 ```
 
-# No escape!
+## No escape!
 
 Almost nothing needs to be escaped.
 

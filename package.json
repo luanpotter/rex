@@ -1,6 +1,6 @@
 {
   "name": "bash-rex",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "A simple regexp executer for bash",
   "main": "index.js",
   "repository": "https://github.com/luanpotter/rex",

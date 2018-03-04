@@ -17,7 +17,7 @@ You can install using `npm`:
 Or yarn:
 
 ```bash
-    yarn global bash-rex
+    yarn global add bash-rex
 ```
 
 Or download the bin from github (wip):
@@ -47,7 +47,9 @@ Just use single quotes so `bash` won't replace stuff like `$1`.
 If you want to change a file, you can use `sponge`:
 
 ```bash
+    echo 'foo' > file
     cat file | rex 'foo' 'bar' | sponge file
+    cat file
 ```
 
 Install [sponge](https://linux.die.net/man/1/sponge) for Arch Linux:

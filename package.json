@@ -7,6 +7,7 @@
   "author": "Luan Nico",
   "license": "MIT",
   "private": false,
+  "files": [ "./index.js" ],
   "bin": {
     "rex": "./index.js"
   },

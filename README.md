@@ -20,11 +20,12 @@ Or yarn:
 yarn global add bash-rex
 ```
 
-Or download the bin from github (wip):
+Or download the bin from github (it comes with node bundled in, so it runs on any x64 linux box):
 
 ```bash
-wget https://github.com/luanpotter/bash-rex/TODO
-...
+wget https://github.com/luanpotter/rex/raw/master/dist/rex
+chmod +x rex
+sudo mv rex /usr/bin/rex
 ```
 
 ## Usage

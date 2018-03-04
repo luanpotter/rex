@@ -11,7 +11,7 @@
     "rex": "./index.js"
   },
   "scripts": {
-    "build": "rm -rf dist && pkg index.js --out-path dist --targets node9-linux-x64"
+    "build": "rm -rf dist && pkg index.js --output dist/rex --targets node9-linux-x64"
   },
   "dependencies": {
     "get-stdin": "^6.0.0",

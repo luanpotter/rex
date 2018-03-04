@@ -1,0 +1,13 @@
+{
+  "name": "bash-rex",
+  "version": "0.1.0",
+  "description": "A simple regexp executer for bash",
+  "main": "index.js",
+  "repository": "https://github.com/luanpotter/rex",
+  "author": "Luan Nico",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "get-stdin": "^6.0.0"
+  }
+}

@@ -58,7 +58,7 @@ find . | grep .js | rex '(.*).js' 'mv $1.js $1.ts' | bash
 
 Easy-peasy, hum?
 
-### pipe from ag
+## pipe from ag
 
 ```bash
 ag -l 'variable' | rex -f 'variable' 'new'

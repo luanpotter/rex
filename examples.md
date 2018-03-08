@@ -23,7 +23,7 @@ It will pipe stdin to stdout unharmed, but log it in a `__rex__.bak` file.
 ## Replace tabs with spaces on all files in a project
 
 ```bash
-find . | rex -f '    ' '\t'
+find -name "*.java" | rex -f '    ' '\t'
 ```
 
 Using the `find` command to output all files recursively, and `-f` option to alter files in place. It will ignore directories automatically.
@@ -31,7 +31,7 @@ Using the `find` command to output all files recursively, and `-f` option to alt
 ## Replace spaces with tabs
 
 ```bash
-find . | rex -f '\t' '    '
+find -name "*.java" | rex -f '\t' '    '
 ```
 
 Because we are indentation agnostic.

@@ -83,4 +83,6 @@ It's supposed to be simple: if you want simple, stop reading. If you want a few 
 * * if not on `-f`, rex will output stdin as is, but will save the changes to a `__rex__.bak` file with the requested changes
 * * if on `-f`, it will replace on every file specified, but the originals will be saved on `*.bak` files alongside the altered files
 
+**Beware** when using the `-f` flag: rex will open every file as UTF-8. If you pipe binary files to rex, it will mess them up. Always use something like `find`, `grep` or `ag` to pipe only relevant files.
+
 There are more examples [here](examples.md).

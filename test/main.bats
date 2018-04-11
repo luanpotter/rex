@@ -14,6 +14,11 @@ function rex {
   [ "$result" = "goof" ]
 }
 
+@test "number test" {
+  result="$(echo '1' | rex '1' '2')"
+  [ "$result" = "2" ]
+}
+
 @test "file test" {
   printf "foo\nbar\nfaaf" > file
   cat file | rex '^f' 'g' | sponge file

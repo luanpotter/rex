@@ -24,8 +24,8 @@ if (params.length != 2) {
 	return;
 }
 
-const fromRaw = params[0];
-const toRaw = params[1];
+const fromRaw = params[0].toString();
+const toRaw = params[1].toString();
 
 const from = new RegExp(fromRaw, 'gm');
 const to = toRaw.replace(/\\t/g, '\t').replace(/\\n/g, '\n').replace(/\\r/g, '\r').replace(/\\\\/g, '\\').replace(/\\\$/g, '$$$$');

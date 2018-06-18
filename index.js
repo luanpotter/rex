@@ -2,9 +2,9 @@
 
 const fs = require('fs');
 const stdin = require('get-stdin');
-const argv = require("optimist")
-  .boolean(["f", "b", "h"])
-  .usage("Usage: $0 -fbh [from] [to]")
+const argv = require('yargs')
+  .boolean(['f', 'b', 'h'])
+  .usage('Usage: $0 -fbh [from] [to]')
   .argv;
 
 const ENCDOING = 'UTF-8';
@@ -33,12 +33,12 @@ const to = toRaw.replace(/\\t/g, '\t').replace(/\\n/g, '\n').replace(/\\r/g, '\r
 stdin().then(str => {
 	if (f) {
 		str
-      .split("\n")
+      .split('\n')
       .filter(path => path && fs.lstatSync(path).isFile())
       .forEach(file => {
         const data = fs.readFileSync(file, ENCDOING);
         const result = data.replace(from, to);
-        fs.writeFileSync(file + (b ? ".bak" : ""), result, ENCDOING);
+        fs.writeFileSync(file + (b ? '.bak' : ''), result, ENCDOING);
       });
 	} else {
 		const result = str.replace(from, to);

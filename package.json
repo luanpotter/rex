@@ -7,6 +7,17 @@
   "author": "Luan Nico",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "rex",
+    "sed",
+    "find",
+    "replace",
+    "grep",
+    "regex",
+    "regular",
+    "expression",
+    "bash"
+  ],
   "files": [
     "./index.js"
   ],
